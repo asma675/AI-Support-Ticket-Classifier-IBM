@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>AI Support Ticket Classifier</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <header class="app-header">
+      <div class="app-title-block">
+        <div class="app-pill">IBM AI Specialist • Prototype</div>
+        <h1>🧠 AI Support Ticket Classifier</h1>
+        <p class="app-subtitle">Classifies and routes IT support tickets.</p>
+        <div class="badge-row">
+          <span class="badge"><span class="badge-dot"></span> Demo-Ready UI</span>
+          <span class="badge">LLM • Pattern Prototype</span>
+          <span class="badge">Client Engineering Style</span>
+        </div>
+      </div>
+    </header>
+    <main class="app-main">
+      <section class="card">
+        <div class="card-header">
+          <div class="card-title">Input</div>
+          <div class="card-actions">
+            <button class="button" type="button" id="sampleBtn">
+              <span class="button-icon">✨</span>
+              Sample Input
+            </button>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="field">
+            <label for="mainInput">Paste or type your scenario here</label>
+            <textarea id="mainInput" placeholder="Describe the contract, policy, ticket, incident, or scenario you want this AI assistant to analyze..."></textarea>
+          </div>
+          <div class="field" id="extraControls"></div>
+          <div style="margin-top: 12px; display: flex; justify-content: flex-end; gap: 8px;">
+            <button class="button" type="button" id="clearBtn">Clear</button>
+            <button class="button button-primary" type="button" id="runBtn">
+              <span class="button-icon">⚡</span>
+              Run AI Analysis (Simulated)
+            </button>
+          </div>
+        </div>
+      </section>
+      <section class="card">
+        <div class="card-header">
+          <div class="card-title">Output</div>
+          <div class="card-actions">
+            <span class="status-pill">
+              <span class="status-dot"></span>
+              Simulated LLM Engine
+            </span>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="output-panel" id="outputPanel">
+            <div class="output-header">
+              <span>Awaiting input...</span>
+              <span class="chip">No run yet</span>
+            </div>
+            <div class="output-body" id="outputBody">
+              <p>Enter some text and click <strong>Run AI Analysis</strong> to see a simulated response that mimics how a watsonx-style pilot could behave in a client engagement.</p>
+            </div>
+          </div>
+          <div class="metric-row">
+            <div class="metric">
+              <div class="metric-label">Confidence (simulated)</div>
+              <div class="metric-value" id="metricConfidence">-</div>
+            </div>
+            <div class="metric">
+              <div class="metric-label">Latency (ms, simulated)</div>
+              <div class="metric-value" id="metricLatency">-</div>
+            </div>
+            <div class="metric">
+              <div class="metric-label">Pattern</div>
+              <div class="metric-value" id="metricPattern">-</div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
